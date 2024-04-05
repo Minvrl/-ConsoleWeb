@@ -48,10 +48,7 @@ function loadProducts() {
                             if (index !== -1) {
                                 idsArr.splice(index, 1);
                             }
-                            var badge = elem.parentElement.parentElement.parentElement.firstElementChild;
-                            if (badge.innerText == "Wished") {
-                                badge.remove(); 
-                            }
+                            elem.parentElement.parentElement.parentElement.firstElementChild.innerText = ""
                             localStorage.setItem("productIds", JSON.stringify(idsArr));
                             wishlistCountElem.innerText = idsArr.length;
 
